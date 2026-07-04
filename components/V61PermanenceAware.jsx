@@ -137,10 +137,6 @@ export function V61PermanenceAware() {
                 <td style={{ padding: '1rem', fontFamily: 'DM Mono, monospace', fontSize: '0.85rem', color: 'var(--gold)', textTransform: 'uppercase' }}>Status</td>
                 <td style={{ padding: '1rem', color: 'var(--text-1)' }}>Proposed / Ready for PR review</td>
               </tr>
-              <tr style={{ borderBottom: '1px solid var(--rule)' }}>
-                <td style={{ padding: '1rem', fontFamily: 'DM Mono, monospace', fontSize: '0.85rem', color: 'var(--gold)', textTransform: 'uppercase' }}>Next Step</td>
-                <td style={{ padding: '1rem', color: 'var(--text-1)' }}>Veteran affairs domain expert review</td>
-              </tr>
             </tbody>
           </table>
 

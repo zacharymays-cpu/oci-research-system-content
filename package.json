@@ -1,0 +1,9 @@
+{
+  "name": "@zacharymays-cpu/oci-research-system",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "peerDependencies": {
+    "react": "^18 || ^19"
+  }
+}

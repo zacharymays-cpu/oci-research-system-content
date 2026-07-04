@@ -40,6 +40,9 @@ export function ResearchSystemIndex() {
           <p>
             The system evolved through six versions (V4.0 → V6.1) plus one deliberate rejection (V5.2). Each iteration solved specific problems and introduced new capabilities. This documentation is for researchers, academics, and practitioners interested in building or understanding similar evaluation systems.
           </p>
+          <p>
+            The pages below cover two additional things beyond methodology history: how evidence about a candidate organization actually gets gathered, and how the people and organizations named in this dataset are protected and governed.
+          </p>
         </div>
       </section>
 
@@ -271,6 +274,33 @@ export function ResearchSystemIndex() {
                 <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.3rem', marginBottom: '0.5rem', color: 'var(--text-1)' }}>V6.1</h3>
                 <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.75rem', color: 'var(--gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>Permanence-Aware</p>
                 <p style={{ fontSize: '0.95rem', color: 'var(--text-3)', lineHeight: 1.6 }}>Separates intensity from system permanence. Proposed refinement.</p>
+              </div>
+            </a>
+          </div>
+
+          <hr className="rule" />
+        </div>
+      </section>
+
+      {/* Data Gathering & Governance Grid */}
+      <section className="section">
+        <div className="container--wide">
+          <div className="section__label">Beyond Methodology: Evidence & Governance</div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
+            <a href="/research-system/evidence-pipeline" style={{ textDecoration: 'none' }}>
+              <div className="book-card" style={{ position: 'relative', padding: '2rem', border: '1px solid var(--rule)', borderLeft: '3px solid var(--gold)' }}>
+                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.3rem', marginBottom: '0.5rem', color: 'var(--text-1)' }}>Evidence Pipeline</h3>
+                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.75rem', color: 'var(--gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>How Sources Get Found</p>
+                <p style={{ fontSize: '0.95rem', color: 'var(--text-3)', lineHeight: 1.6 }}>The free-first, cost-ordered search that builds an evidence brief for a candidate organization before it's ever scored.</p>
+              </div>
+            </a>
+
+            <a href="/research-system/data-governance" style={{ textDecoration: 'none' }}>
+              <div className="book-card" style={{ position: 'relative', padding: '2rem', border: '1px solid var(--rule)', borderLeft: '3px solid var(--accent)' }}>
+                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.3rem', marginBottom: '0.5rem', color: 'var(--text-1)' }}>Data Governance</h3>
+                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.75rem', color: 'var(--gold)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>Protecting People</p>
+                <p style={{ fontSize: '0.95rem', color: 'var(--text-3)', lineHeight: 1.6 }}>How real identities are encrypted and never shown, how organizations' relationships to each other are tracked, and what stays unpublished until reviewed.</p>
               </div>
             </a>
           </div>

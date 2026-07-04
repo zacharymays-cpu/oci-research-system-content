@@ -7,3 +7,5 @@ export { V51FormalValidation, V51FormalValidationMetadata } from './components/V
 export { V52DeepseekCaseStudy, V52DeepseekCaseStudyMetadata } from './components/V52DeepseekCaseStudy';
 export { V60LiftonFramework, V60LiftonFrameworkMetadata } from './components/V60LiftonFramework';
 export { V61PermanenceAware, V61PermanenceAwareMetadata } from './components/V61PermanenceAware';
+export { DataGovernance, DataGovernanceMetadata } from './components/DataGovernance';
+export { EvidencePipeline, EvidencePipelineMetadata } from './components/EvidencePipeline';

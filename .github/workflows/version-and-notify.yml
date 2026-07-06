@@ -1,0 +1,59 @@
+name: Version bump and notify consumers
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  bump-version:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+      version: ${{ steps.bump.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.DISPATCH_TOKEN }}
+
+      - name: Bump patch version
+        id: bump
+        run: |
+          NEW_VERSION=$(node -e "
+            const fs = require('fs');
+            const pkg = JSON.parse(fs.readFileSync('package.json'));
+            const parts = pkg.version.split('.').map(Number);
+            parts[2] += 1;
+            pkg.version = parts.join('.');
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+            process.stdout.write(pkg.version);
+          ")
+          echo "version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push version bump
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json
+          git commit -m "chore: bump version to ${{ steps.bump.outputs.version }} [skip ci]"
+          git push
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  notify-consumers:
+    needs: bump-version
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo:
+          - zacharymays-cpu/zacharymays-site
+          - zacharymays-cpu/organizational-coercion-index
+    steps:
+      - name: Dispatch update event
+        run: |
+          curl -sSf -X POST \
+            -H "Authorization: Bearer ${{ secrets.DISPATCH_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ matrix.repo }}/dispatches" \
+            -d "{\"event_type\":\"oci-research-system-updated\",\"client_payload\":{\"sha\":\"${{ needs.bump-version.outputs.sha }}\",\"version\":\"${{ needs.bump-version.outputs.version }}\"}}"

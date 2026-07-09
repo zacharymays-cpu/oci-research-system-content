@@ -87,12 +87,12 @@ export function V60LiftonFramework() {
           <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.4rem', marginTop: '2rem', marginBottom: '1rem', color: 'var(--text-1)' }}>Scoring Outputs (Generated in Parallel)</h3>
           <p>V6.0 generates three scoring outputs simultaneously for each organization:</p>
           <ul style={{ marginTop: '1rem', paddingLeft: '2rem', color: 'var(--text-1)' }}>
-            <li><strong>Young's Original Score:</strong> 0-10 binary checklist from C1-C10 jury track (Not Culty, Kinda Culty, Super Culty)</li>
-            <li><strong>Composite Score:</strong> 0-100% formula-based from C1-C10 jury track</li>
-            <li><strong>Lifton's Totalism Score:</strong> 0-10 from C11 jury track (Non-Totalizing, Moderately Totalizing, Psychologically Totalizing)</li>
+            <li><strong>Young's Presence Score:</strong> 0-10 count of which cult dynamics are present (Not Culty, Kinda Culty, Super Culty)</li>
+            <li><strong>Composite Intensity Score:</strong> 0-100 measuring how intensely those characteristics manifest (Low Intensity, Moderate Intensity, High Intensity)</li>
+            <li><strong>Lifton's Gate Assessment:</strong> 0-10 from C11 jury track measuring whether the organization has specific combinations of Lifton characteristics (Non-Totalizing, Moderately Totalizing, Psychologically Totalizing)</li>
           </ul>
           <p style={{ marginTop: '1rem' }}>
-            All three scores are generated from the same evidence package via parallel jury processing. Users receive all three perspectives on each organization—Young's behavior-based analysis, Composite evidence-weighted prevalence, and Lifton's system-level totalism assessment.
+            All three scores are generated from the same evidence package via parallel jury processing. Users receive all three perspectives on each organization—Young's presence-based analysis, Composite intensity measurement, and Lifton's system-level assessment. Cultishness determination requires analysis beyond these scores, incorporating transparency, accountability, and coercive control mechanisms.
           </p>
 
           <div style={{ background: 'color-mix(in srgb, var(--gold) 8%, transparent)', padding: '1.5rem', marginTop: '1.5rem', borderLeft: '3px solid var(--gold)' }}>

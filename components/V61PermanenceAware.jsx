@@ -18,7 +18,7 @@ export function V61PermanenceAware() {
         <div className="container--wide">
           <div className="section__label">Problem V6.0 Missed</div>
           <div className="pull-quote">
-            <p className="pull-quote__text">V6.0 conflates totalizing intensity with system permanence. US Marines score 7.96 (penalized for temporary structure) but jury detects 9.7 intensity. CIA units are similarly underscored despite high totalism. V6.1 separates these components.</p>
+            <p className="pull-quote__text">V6.0 doesn't distinguish between the intensity of control structures and the permanence of the system. US Marines exhibit 9.7 intensity on totalizing characteristics but have temporary service commitments (0.9 permanence multiplier). CIA units are similarly high-intensity but temporary-structure. V6.1 separates intensity (a measurement) from permanence (a structural design factor).</p>
           </div>
           <hr className="rule" />
         </div>

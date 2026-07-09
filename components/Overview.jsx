@@ -70,7 +70,7 @@ export function Overview() {
             <path d="M 160 330 L 160 430" className="arch-track" />
             <text x="160" y="355" className="arch-label" textAnchor="middle" fontSize="14">Young Track</text>
             <text x="160" y="380" className="arch-small" textAnchor="middle">C1-C10 Behavior</text>
-            <text x="160" y="400" className="arch-small" textAnchor="middle">Score: 0-10 & 0-100%</text>
+            <text x="160" y="400" className="arch-small" textAnchor="middle">Presence (0-10) & Intensity (0-100)</text>
 
             {/* Lifton Track */}
             <rect x="320" y="330" width="260" height="100" className="arch-box" rx="4" />
@@ -132,7 +132,7 @@ export function Overview() {
             <div className="component-card">
               <h3 className="component-card__title">Dual-Track Scoring</h3>
               <p className="component-card__label">Complementary Frameworks</p>
-              <p className="component-card__text">Two independent frameworks run in parallel: Young's behavioral indicators (C1-C10) + Lifton's system-level totalism (C11). Divergence between tracks reveals new insights; both provided to users.</p>
+              <p className="component-card__text">Two independent frameworks run in parallel: Young's behavioral indicators (C1-C10) measuring presence and intensity + Lifton's system-level totalism (C11) measuring specific control combinations. Divergence between tracks reveals new insights; both provided to users.</p>
             </div>
 
             {/* Human Review Gate Card */}
